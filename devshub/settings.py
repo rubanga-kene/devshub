@@ -1,6 +1,6 @@
 from pathlib import Path
 
-# import dj_database_url
+import dj_database_url
 import os
 # from dotenv import load_dotenv
 
@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'devshub-ma3a.onrender.com',
+    '*'
 ]
 
 
@@ -91,6 +92,14 @@ DATABASES = {
     }
 }
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
+}
+
 # DATABASES['default'] = dj_database_url.parse('postgresql://devshub_db_user:intrscy3sB4NpvjqH5toUuNYDolyWxwz@dpg-d0ubn6m3jp1c73fps590-a.oregon-postgres.render.com/devshub_db')
 
 # Password validation
@@ -130,13 +139,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,  'static')
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
