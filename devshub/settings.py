@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-@%6hy&i#&rirj9!9bsuxt3k!-qe+-#+iq##f8t7h2_ml!-!k$(
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "devshub.up.railway.app",
+    "https://devshub.up.railway.app",
 ]
 
 ALLOWED_HOSTS = [
