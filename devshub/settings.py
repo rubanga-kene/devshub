@@ -19,14 +19,14 @@ SECRET_KEY = 'django-insecure-@%6hy&i#&rirj9!9bsuxt3k!-qe+-#+iq##f8t7h2_ml!-!k$(
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://devshub.up.railway.app",
+    "devshub.up.railway.app",
 ]
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'devshub-ma3a.onrender.com',
-    'https://devshub.up.railway.app'
+    'devshub.up.railway.app',
 ]
 
 
