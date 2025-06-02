@@ -18,11 +18,15 @@ SECRET_KEY = 'django-insecure-@%6hy&i#&rirj9!9bsuxt3k!-qe+-#+iq##f8t7h2_ml!-!k$(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://devshub.up.railway.app",
+]
+
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'devshub-ma3a.onrender.com',
-    '*'
+    'https://devshub.up.railway.app'
 ]
 
 
@@ -101,7 +105,6 @@ DATABASES = {
     )
 }
 
-# DATABASES['default'] = dj_database_url.parse('postgresql://devshub_db_user:intrscy3sB4NpvjqH5toUuNYDolyWxwz@dpg-d0ubn6m3jp1c73fps590-a.oregon-postgres.render.com/devshub_db')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
